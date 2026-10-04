@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description: "A small Next.js todo app for comparing CI runtimes.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
